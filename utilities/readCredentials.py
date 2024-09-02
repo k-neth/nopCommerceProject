@@ -18,4 +18,8 @@ class ReadConfig:
     def getPassword():
         password=config.get('common info','password')
         return password
+    @staticmethod
+    def getSearchitem():
+        searchitem=input("enter your search keyword")
+        return searchitem
 
