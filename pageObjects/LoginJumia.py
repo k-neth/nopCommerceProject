@@ -19,24 +19,3 @@ class LoginJumia:
     def setPassword(self,password):
         self.driver.find_element(By.NAME,self.password).send_keys(password)
         self.driver.find_element(By.NAME,self.password).send_keys(Keys.ENTER)
-    # def CheckSuccess(self):
-    #     global startsearch
-    #     startsearch=self.driver.find_element(By.ID, self.searchtext)
-    #     startsearch.click()
-    # def searchitem(self,searchterm):
-    
-    #     startsearch.send_keys(searchterm)
-    # def Startsearch(self):
-    #     startsearch.click()
-    #     startsearch.send_keys(Keys.ENTER)
-    # def StartSearch(self):
-    #     startsearch.send_keys(Keys.ENTER)
-        
-        
-
-        # WebDriverWait(self.driver,15).until(EC.visibility_of_element_located(self.driver.find_element(By.XPATH, self.searchtext)))
-       
-
-
-    # def clickLogin(self):
-    #     self.driver.find_element(By.XPATH,self.loginbutton).click()

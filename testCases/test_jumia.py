@@ -1,6 +1,8 @@
 import pytest
 from pageObjects.LoginJumia import LoginJumia
 from pageObjects.SearchItemJumia import SearchItemJumia
+from pageObjects.AddItemToCart import AddItemToCart
+from pageObjects.GetPricesJumia import GetPricesJumia
 import time
 from selenium import webdriver
 from selenium.webdriver.support import expected_conditions as EC
@@ -51,7 +53,14 @@ class Test_J01:
         self.ks=SearchItemJumia(self.driver)
         self.ks.Startsearch(searchterm=self.searchterm)
         self.ks.ClickSearchButton()
+    def test_GetItem(self):
+        self.gt=AddItemToCart(self.driver)
+        self.gt.ClickCart()
+        self.gt.ItemAdded()
         # time.sleep(10)
+    def test_getPricesJumia(self):
+        self.gp=GetPricesJumia(self.driver)
+        self.gp.getprices()
         
         # self.ks.filterTop()
         # self.ks.ClickSearchButton()
